@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="systemManager" class="org.egitim.spring.SystemManager">
+		<property name="serverName" value="Main Server" />
+		<property name="printerList">
+			<list>
+				<value>Yazıcı (Toplantı Odası)</value>
+				<value>Yazıcı (Ortak Alan)</value>
+				<value>Yazıcı (Kopyalama Odası)</value>
+			</list>
+		</property>
+		<property name="routerSet">
+			<list>
+				<value>Router 2314</value>
+				<value>Router 2315</value>
+				<value>Router 2316</value>
+				<value>Router 2317</value>
+			</list>
+		</property>
+		<property name="securityProperties">
+			<props>
+				<prop key="accessPolicyId">4729</prop>
+				<prop key="restrictionActionSet">RAS-934</prop>
+			</props>
+		</property>
+		<property name="allowedClientMap">
+			<map>
+				<entry key="egitim-pc-001" value="192.110.1.9" />
+				<entry key="egitim-pc-002" value="192.110.1.12" />
+				<entry key="egitim-pc-003" value="192.110.1.45" />
+				<entry key="egitim-pc-004" value="192.110.1.36" />
+				<entry key="egitim-pc-005" value="192.110.1.17" />
+			</map>
+		</property>
+	</bean>
+
+</beans>
